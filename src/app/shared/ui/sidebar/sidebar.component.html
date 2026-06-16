@@ -1,0 +1,36 @@
+<aside
+  class="hidden md:block
+         w-64 h-full
+         border-r border-white/10
+         bg-slate-950/80
+         backdrop-blur-xl"
+>
+  <nav class="p-4">
+
+  <a
+  routerLink="/notes"
+  routerLinkActive="bg-white/10 text-white"
+  [routerLinkActiveOptions]="{ exact: true }"
+  class="flex items-center gap-3
+         px-4 py-3 rounded-2xl
+         text-slate-300
+         hover:bg-white/5
+         transition-all"
+>
+      📄 Notes
+    </a>
+
+  <a
+  routerLink="/notes/create"
+  routerLinkActive="bg-white/10 text-white"
+  class="flex items-center gap-3
+         px-4 py-3 rounded-2xl
+         text-slate-300
+         hover:bg-white/5
+         transition-all"
+>
+      ✨ Create Note
+    </a>
+
+  </nav>
+</aside>

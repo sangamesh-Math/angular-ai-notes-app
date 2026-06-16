@@ -1,0 +1,49 @@
+<header
+  class="h-16 border-b border-white/10
+         bg-slate-950/80 backdrop-blur-xl
+         flex items-center justify-between
+         px-6"
+>
+  <div class="flex items-center gap-3">
+    <div
+      class="w-8 h-8 rounded-xl
+             bg-gradient-to-r
+             from-violet-500
+             to-cyan-500"
+    ></div>
+
+    <span
+      class="text-white font-semibold text-lg"
+    >
+      Notes 
+    </span>
+  </div>
+
+  <div class="flex items-center gap-4">
+
+   <button
+  (click)="toggleTheme()"
+  class="px-3 py-2 rounded-xl
+         bg-white/5
+         hover:bg-white/10
+         text-slate-300"
+>
+  {{ themeService.isDarkMode() ? '🌙' : '☀️' }}
+</button>
+
+   <div
+  class="w-10 h-10
+         rounded-full
+         bg-gradient-to-r
+         from-violet-500
+         to-cyan-500
+         flex items-center
+         justify-center
+         text-sm
+         font-semibold"
+>
+  SM
+</div>
+
+  </div>
+</header>

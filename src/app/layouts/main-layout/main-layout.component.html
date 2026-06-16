@@ -1,0 +1,19 @@
+<div
+  class="h-screen
+         text-white"
+  [class.bg-slate-950]="true"
+>
+  <app-header />
+
+  <div class="flex h-[calc(100vh-64px)]">
+
+    <app-sidebar />
+
+    <main
+      class="flex-1 overflow-auto p-8"
+    >
+      <router-outlet />
+    </main>
+
+  </div>
+</div>

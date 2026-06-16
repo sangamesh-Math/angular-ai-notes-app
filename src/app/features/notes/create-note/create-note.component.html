@@ -1,0 +1,120 @@
+<div
+  class="max-w-3xl mx-auto"
+>
+
+  <div
+    class="rounded-3xl
+           bg-white/5
+           border border-white/10
+           backdrop-blur-xl
+           p-8"
+  >
+
+    <h1
+      class="text-3xl font-bold"
+    >
+      Create Note
+    </h1>
+
+    <p
+      class="text-slate-400 mt-2"
+    >
+      Capture your ideas.
+    </p>
+
+    <form
+      [formGroup]="noteForm"
+      (ngSubmit)="saveNote()"
+      class="space-y-6 mt-8"
+    >
+
+      <div>
+
+        <label
+          class="block mb-2 text-sm text-slate-300"
+        >
+          Title
+        </label>
+
+        <input
+          type="text"
+          formControlName="title"
+          class="w-full
+                 rounded-2xl
+                 bg-white/5
+                 border border-white/10
+                 px-4 py-3
+                 outline-none"
+        />
+
+      </div>
+
+      <div>
+
+        <label
+          class="block mb-2 text-sm text-slate-300"
+        >
+          Category
+        </label>
+
+        <select
+          formControlName="category"
+          class="w-full
+                 rounded-2xl
+                 bg-white/5
+                 border border-white/10
+                 px-4 py-3"
+        >
+          <option value="Learning">
+            Learning
+          </option>
+
+          <option value="Work">
+            Work
+          </option>
+
+          <option value="Personal">
+            Personal
+          </option>
+        </select>
+
+      </div>
+
+      <div>
+
+        <label
+          class="block mb-2 text-sm text-slate-300"
+        >
+          Content
+        </label>
+
+        <textarea
+          rows="6"
+          formControlName="content"
+          class="w-full
+                 rounded-2xl
+                 bg-white/5
+                 border border-white/10
+                 px-4 py-3
+                 outline-none"
+        >
+        </textarea>
+
+      </div>
+
+      <button
+        type="submit"
+        class="px-6 py-3
+               rounded-2xl
+               bg-violet-600
+               hover:bg-violet-500
+               transition-all"
+      >
+        Save Note
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

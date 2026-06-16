@@ -1,0 +1,18 @@
+<div class="flex gap-3 flex-wrap">
+
+  @for (category of categories; track category) {
+
+    <button
+      (click)="selectCategory(category)"
+      class="px-4 py-2 rounded-full transition-all"
+      [ngClass]="{
+        'bg-violet-500 text-white': selectedCategory() === category,
+        'bg-white/5 text-slate-300 hover:bg-white/10': selectedCategory() !== category
+      }"
+    >
+      {{ category }}
+    </button>
+
+  }
+
+</div>

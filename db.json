@@ -1,0 +1,61 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "title": "Angular Signals",
+      "content": "Learning Angular signals",
+      "category": "Learning",
+      "createdAt": "2026-06-12"
+    },
+    {
+      "id": "2",
+      "title": "Sprint Planning",
+      "content": "Prepare sprint report",
+      "category": "Work",
+      "createdAt": "2026-06-11"
+    },
+    {
+      "id": "3",
+      "title": "Buy Groceries",
+      "content": "Milk, Bread, Eggs",
+      "category": "Personal",
+      "createdAt": "2026-06-10"
+    },
+    {
+      "title": "Packing",
+      "category": "Personal",
+      "content": "1. Pack Laptop & charger\n2. Clothes for a week. \n3. Submit Personal laptop to Teja",
+      "createdAt": "2026-06-12",
+      "id": "FaGLl38MNxk"
+    },
+    {
+      "title": "note 1 ",
+      "category": "Learning",
+      "content": "note 1 content",
+      "createdAt": "2026-06-15",
+      "id": "_IR_g7d1PNk"
+    },
+    {
+      "title": "note2",
+      "category": "Learning",
+      "content": "note2",
+      "createdAt": "2026-06-15",
+      "id": "OK6ceJanC4I"
+    },
+    {
+      "title": "note3",
+      "category": "Work",
+      "content": "note3",
+      "createdAt": "2026-06-15",
+      "id": "0zK9erVNpV0"
+    },
+    {
+      "title": "note4",
+      "category": "Work",
+      "content": "note4",
+      "createdAt": "2026-06-15",
+      "id": "3VSz7NqSEsw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
