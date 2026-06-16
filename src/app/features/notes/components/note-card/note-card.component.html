@@ -20,6 +20,31 @@
     >
       {{ note().category }}
     </span>
+
+    <div
+      class="flex gap-2"
+    >
+
+      <button
+        (click)="onEdit()"
+        class="text-cyan-400
+               hover:text-cyan-300
+               text-sm"
+      >
+        Edit
+      </button>
+
+      <button
+        (click)="onDelete()"
+        class="text-red-400
+               hover:text-red-300
+               text-sm"
+      >
+        Delete
+      </button>
+
+    </div>
+
   </div>
 
   <h3
