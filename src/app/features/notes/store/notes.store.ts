@@ -78,6 +78,16 @@ updateNote(
         : note
     )
   );
+}
+removeNote(
+  id: number
+) {
+
+  this.notes.update(notes =>
+    notes.filter(
+      note => note.id !== id
+    )
+  );
 
 }
 

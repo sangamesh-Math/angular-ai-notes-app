@@ -16,6 +16,17 @@ export class NoteCardComponent {
 
   note =
     input.required<Note>();
+  
+  deleteClicked = output<number>();
+
+  onDelete() {
+
+    this.deleteClicked.emit(
+      this.note().id
+    );
+
+  }
+
 
   edit =
     output<number>();
