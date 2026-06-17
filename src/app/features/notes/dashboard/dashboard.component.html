@@ -67,8 +67,9 @@
       ) {
 
         <app-note-card
-          [note]="note"
-        />
+  [note]="note"
+  (edit)="editNote($event)"
+/>
 
       }
     </div>
