@@ -1,6 +1,7 @@
 import {
   Component,
-  input
+  input,
+  output
 } from '@angular/core';
 
 import { Note }
@@ -15,5 +16,16 @@ export class NoteCardComponent {
 
   note =
     input.required<Note>();
+  
+  deleteClicked = output<number>();
+
+  onDelete() {
+
+    this.deleteClicked.emit(
+      this.note().id
+    );
+
+  }
+
 
 }

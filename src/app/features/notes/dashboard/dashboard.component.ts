@@ -5,6 +5,8 @@ import { FilterBarComponent } from '../components/filter-bar/filter-bar.componen
 import { inject } from '@angular/core';
 import { NotesStore } from '../store/notes.store';
 import { NoteCardComponent } from '../components/note-card/note-card.component';
+import { NoteService }
+from '../../../core/services/note.service';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -20,11 +22,49 @@ import { NoteCardComponent } from '../components/note-card/note-card.component';
 export class DashboardComponent {
   store =
     inject(NotesStore);
+private noteService =
+  inject(NoteService);
     onSearchChanged(value: string) {
 
   console.log('Dashboard received:', value);
 
   this.store.searchText.set(value);
+
+}
+
+deleteNote(id: number) {
+
+  const confirmed =
+    confirm(
+      'Are you sure you want to delete this note?'
+    );
+
+  if (!confirmed) {
+    return;
+  }
+
+  this.noteService
+    .deleteNote(id)
+    .subscribe({
+
+      next: () => {
+
+        this.store.removeNote(
+          id
+        );
+
+      },
+
+      error: error => {
+
+        console.error(
+          'Delete failed',
+          error
+        );
+
+      }
+
+    });
 
 }
 }

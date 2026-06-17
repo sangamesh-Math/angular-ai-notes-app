@@ -50,4 +50,14 @@ export class NoteService {
 
   }
 
+    deleteNote(
+  id: number
+): Observable<void> {
+
+  return this.http.delete<void>(
+    `${this.apiUrl}/${id}`
+  );
+
+}
+
 }

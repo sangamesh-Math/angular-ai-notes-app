@@ -67,8 +67,9 @@
       ) {
 
         <app-note-card
-          [note]="note"
-        />
+  [note]="note"
+  (deleteClicked)="deleteNote($event)"
+/>
 
       }
     </div>
