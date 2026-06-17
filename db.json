@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "id": "1",
+      "title": "Angular Signals",
+      "content": "Learning Angular signals 1",
+      "category": "Learning",
+      "createdAt": "2026-06-12"
+    },
+    {
       "id": "2",
       "title": "Sprint Planning",
       "content": "Prepare sprint report",

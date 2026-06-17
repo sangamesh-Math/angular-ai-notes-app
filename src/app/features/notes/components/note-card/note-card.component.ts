@@ -28,4 +28,26 @@ export class NoteCardComponent {
   }
 
 
+  edit =
+    output<number>();
+
+  delete =
+    output<number>();
+
+  onEdit() {
+
+    this.edit.emit(
+      this.note().id
+    );
+
+  }
+
+  onDelete() {
+
+    this.delete.emit(
+      this.note().id
+    );
+
+  }
+
 }

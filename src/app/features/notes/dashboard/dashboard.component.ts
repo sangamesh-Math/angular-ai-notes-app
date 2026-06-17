@@ -5,6 +5,7 @@ import { FilterBarComponent } from '../components/filter-bar/filter-bar.componen
 import { inject } from '@angular/core';
 import { NotesStore } from '../store/notes.store';
 import { NoteCardComponent } from '../components/note-card/note-card.component';
+import { Router } from '@angular/router';
 import { NoteService }
 from '../../../core/services/note.service';
 @Component({
@@ -22,6 +23,8 @@ from '../../../core/services/note.service';
 export class DashboardComponent {
   store =
     inject(NotesStore);
+  private router =
+  inject(Router);
 private noteService =
   inject(NoteService);
     onSearchChanged(value: string) {
@@ -29,6 +32,15 @@ private noteService =
   console.log('Dashboard received:', value);
 
   this.store.searchText.set(value);
+
+}
+
+editNote(id: number) {
+
+  this.router.navigate([
+    '/notes/edit',
+    id
+  ]);
 
 }
 
