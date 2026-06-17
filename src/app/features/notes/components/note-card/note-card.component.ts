@@ -42,12 +42,4 @@ export class NoteCardComponent {
 
   }
 
-  onDelete() {
-
-    this.delete.emit(
-      this.note().id
-    );
-
-  }
-
 }
